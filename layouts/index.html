@@ -1,8 +1,8 @@
 {{ define "main" }}
-    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
-    {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
-    {{ $filtered := ($pages | intersect $notHidden) }}
-    {{ $pag := .Paginate ($filtered) }}
+    <!-- {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }} -->
+    <!-- {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }} -->
+    <!-- {{ $filtered := ($pages | intersect $notHidden) }} -->
+    <!-- {{ $pag := .Paginate ($filtered) }} -->
 
     <ul class="menu" id="main-menu-home">
         {{ $currentPage := . }}
@@ -25,12 +25,12 @@
     </ul>
 
     <section class="article-list">
-        {{ range $index, $element := first 3 $pag.Pages }}
+        {{ range $index, $element := first 3 $.Site.RegularPages }}
             {{ partial "article-list/default" . }}
         {{ end }}
     </section>
 
-    {{- partial "pagination.html" . -}}
+    <!-- {{- partial "pagination.html" . -}} -->
     {{- partial "footer/footer" . -}}
 {{ end }}
 
