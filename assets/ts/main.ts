@@ -5,13 +5,15 @@
 *   @website: https://jimmycai.com
 *   @link: https://github.com/CaiJimmy/hugo-theme-stack
 */
-import StackGallery from "ts/gallery";
 import { getColor } from 'ts/color';
-import menu from 'ts/menu';
-import createElement from 'ts/createElement';
 import StackColorScheme from 'ts/colorScheme';
+import createElement from 'ts/createElement';
+import StackGallery from "ts/gallery";
+import menu from 'ts/menu';
 import { setupScrollspy } from 'ts/scrollspy';
 import { setupSmoothAnchors } from "ts/smoothAnchors";
+
+import "ts/wordpress-playlist-hugo";
 
 let Stack = {
     init: () => {
